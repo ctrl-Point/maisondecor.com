@@ -2370,7 +2370,7 @@ img{
 	bottom:0px;
 	width:30px;
 	height:1px;
-	background-color:#CFCFCF;
+	background-color:#c6c6c6;
 }
 
 .main-footer .logo-widget{
@@ -2422,8 +2422,8 @@ img{
 }
 
 .main-footer .logo-widget .social-icons li a:hover{
-	color: grey;
-	border-color:grey;
+	color:#c6c6c6;
+	border-color:#c6c6c6;
 }
 
 /* Links Widget */
@@ -2558,7 +2558,7 @@ img{
 }
 
 .newsletter-form .form-group input:focus{
-	border-color:#797979;
+	border-color:#dfb162;
 }
 
 .newsletter-form .form-group input[type="submit"],
@@ -2580,11 +2580,20 @@ img{
 
 .main-footer .footer-bottom .purchase{
 	position:relative;
-	color:#797979;
+	color:#dfb162;
 	font-size:14px;
 }
 
+.pull-right .p{
+	color: white;
+}
+
+
+
+
+
 /*** 
+
 
 ====================================================================
 	Call To Action Section
