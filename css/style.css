@@ -926,7 +926,7 @@ img{
 .main-menu .navigation{
 	position:relative;
 	margin:0px;
-	font-family: Helvetica, sans-serif;
+	font-family: sans-serif;
 }
 
 .main-menu .navigation > li{
@@ -1344,7 +1344,7 @@ img{
 	color:#8e8e8e;
 	font-size:15px;
 	font-weight:400;
-	font-family: Helvetica, 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .header-style-five .header-upper .info-outer .info-box .text strong{
@@ -1380,7 +1380,7 @@ img{
 	color:#242424;
 	font-size:16px;
 	font-weight:500;
-	font-family: Helvetica, 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .header-style-five .outer-box .search-box-btn{
@@ -2152,7 +2152,7 @@ img{
 	position:relative;
 	color:#ffffff;
 	font-size:62px;
-	font-weight:700;
+	font-weight:500;
 	line-height:1.1em;
 	opacity: 0;
 	-webkit-transition: all 1000ms ease;
@@ -2175,21 +2175,19 @@ img{
 	-o-transform: translateX(0);
 	transform: translateX(0);
 	transition-delay: 1000ms;
-	font-family: Helvetica, 'poppings', sans-serif;
-	font-weight: 200;
 }
 
 .main-slider .content .text{
 	position:relative;
 	color:#ffffff;
 	font-size:18px;
-	font-weight:300;
+	font-weight:200;
 	line-height:1.8em;
 	margin-top:35px;
 	margin-bottom:40px;
 	opacity: 0;
 	max-width:570px;
-	font-family: Helvetica,'Open Sans', sans-serif;
+	font-family: Helvetica, 'Open Sans', sans-serif;
 	-webkit-transition: all 1000ms ease;
 	-moz-transition: all 100ms ease;
 	-ms-transition: all 1000ms ease;
@@ -2273,7 +2271,7 @@ img{
 	-ms-transition:all 0.5s ease;
 	-o-transition:all 0.5s ease;
 	transition:all 0.5s ease;
-	background-color:#5a5a5a;
+	background-color:rgba(255,255,255,0.90);
 }
 
 .main-slider .owl-prev{
@@ -2294,12 +2292,12 @@ img{
 	-o-transition:all 0.5s ease;
 	transition:all 0.5s ease;
 	background-image:none;
-	background-color:#5a5a5a;
+	background-color:rgba(255,255,255,0.90);
 }
 
 .main-slider .owl-next:hover,
 .main-slider .owl-prev:hover{
-	background:#A8A8A8;
+	background:#9a9a9a;
 	opacity:1;	
 }
 
@@ -2329,7 +2327,7 @@ img{
 }
 
 .main-slider .owl-dots .owl-dot.active span{
-	background:#565656;	
+	background:#6f6f70;	
 }
 
 /*** 
@@ -5547,7 +5545,7 @@ img{
 	margin-top:50px;
 	font-weight:500;
 	background-color:whitesmoke;
-	font-family: Helvetica, serif;
+	font-family: serif;
 }
 
 .services-detail .inner-box .service-contact-box a{
