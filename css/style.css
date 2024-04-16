@@ -8541,3 +8541,10 @@ img{
 	padding: 5px;
     color: #b1b1b1;
 }
+
+#whatsapp-icon {
+	position: fixed;
+	bottom: 20%;
+	right: 20px;
+	z-index: 1000;
+  }

@@ -1056,6 +1056,12 @@
 	</section>
 	<!-- End Contact Form Section -->
 	
+	<div id="whatsapp-icon">
+		<a href="https://wa.me/2348031140154" target="_blank">
+		  <img src="images/whatsapp.png" alt="WhatsApp Icon">
+		</a>
+	  </div>
+	
 	<!--Main Footer-->
     <footer class="main-footer">
 		<div class="auto-container">
@@ -1191,6 +1197,16 @@
 <script src="js/appear.js"></script>
 <script src="js/scrollbar.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+	window.onscroll = function() {
+		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			document.getElementById("whatsapp-icon").style.display = "block";
+		} else {
+			document.getElementById("whatsapp-icon").style.display = "none";
+		}
+	};
+</script>
 
 <script type="text/javascript">
 	window.omnisend = window.omnisend || [];
