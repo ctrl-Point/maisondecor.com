@@ -2558,7 +2558,7 @@ img{
 }
 
 .newsletter-form .form-group input:focus{
-	border-color:#dfb162;
+	border-color:#cccccc;
 }
 
 .newsletter-form .form-group input[type="submit"],
