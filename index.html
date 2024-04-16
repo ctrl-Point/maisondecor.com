@@ -1126,10 +1126,11 @@
 									<div class="text">Get Special offers & Discounts</div>
 									<!-- Newsletter Form -->
 									<div class="newsletter-form">
-										<form method="post" action="templateshub.net">
+										<form id="subscribe-form" method="post" action="">
 											<div class="form-group">
 												<input type="email" name="email" value="" placeholder="Enter your email address" required>
-												<button type="submit" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
+												<button type="submit" id="subscribe-button" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
+												<div id="subscribe-message" class="success-message" style="display: none;">Subscribed successfully</div>
 											</div>
 										</form>
 									</div>
@@ -1201,6 +1202,24 @@
 	var t=document.getElementsByTagName("script")[0];
 	t.parentNode.insertBefore(e,t)}();
 </script>
+
+<script>
+	const subscribeForm = document.getElementById("subscribe-form");
+	const subscribeButton = document.getElementById("subscribe-button");
+	const subscribeMessage = document.getElementById("subscribe-message");
+  
+	subscribeButton.addEventListener("click", function (event) {
+	  event.preventDefault();
+	  subscribeButton.style.display = "none";
+	  
+  
+	  // Set a timeout to display the success message for 2 seconds
+	  setTimeout(function () {
+		subscribeMessage.style.display = "block"; // Update message content
+	  }, 1000);
+	});
+  </script>
+
 </body>
 
 <!-- stella-orre/index-4.html  30 Nov 2019 03:49:07 GMT -->

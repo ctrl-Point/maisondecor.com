@@ -346,6 +346,24 @@
 	var t=document.getElementsByTagName("script")[0];
 	t.parentNode.insertBefore(e,t)}();
 </script>
+
+<script>
+	const subscribeForm = document.getElementById("subscribe-form");
+	const subscribeButton = document.getElementById("subscribe-button");
+	const subscribeMessage = document.getElementById("subscribe-message");
+  
+	subscribeButton.addEventListener("click", function (event) {
+	  event.preventDefault();
+	  subscribeButton.style.display = "none";
+	  
+  
+	  // Set a timeout to display the success message for 2 seconds
+	  setTimeout(function () {
+		subscribeMessage.style.display = "block"; // Update message content
+	  }, 1000);
+	});
+  </script>
+
 </body>
 
 <!-- stella-orre/contact.html  30 Nov 2019 03:46:47 GMT -->
