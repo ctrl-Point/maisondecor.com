@@ -377,23 +377,32 @@
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(formData),
 	})
-	.then(response => response.json())
-	.then(data => {
-		console.log('Success:', data);
+	.then(response => {
+		if (response.status === 200) {
+			console.log('Success:', response.statusText);
 
-		// Hide loading indicator
-		document.getElementById('loading-indicator').style.display = 'none';
+			// Hide loading indicator
+			document.getElementById('loading-indicator').style.display = 'none';
 
-		// Show success message
-		document.getElementById('success-message').style.display = 'block';
+			// Show success message
+			document.getElementById('success-message').style.display = 'block';
 
-		// Show the form again
-		document.getElementById('contact-form').style.display = 'block';
+			// Show the form again
+			document.getElementById('contact-form').style.display = 'block';
 
-		// Clear the form (optional)
-		document.getElementById('contact-form').reset();
+			// Clear the form (optional)
+			document.getElementById('contact-form').reset();
+		} else {
+			console.error('Error:', response.statusText);
+
+			// Hide loading indicator
+			document.getElementById('loading-indicator').style.display = 'none';
+
+			// Display error message (optional)
+			// You can implement error handling logic here
+		}
 		})
-	.catch(error => {
+		.catch(error => {
 		console.error('Error:', error);
 
 		// Hide loading indicator
