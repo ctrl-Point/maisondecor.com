@@ -180,8 +180,9 @@
 									
 									<div class="form-group col-lg-12 col-md-12 col-sm-12">
 										<div id="loading-indicator" style="display: none;">
-											<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Submit now</span></button>
+											<img src="loading.gif" alt="Loading..." />
 										</div>	
+											<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Submit now</span></button>
 									</div>
 								</div>
 							</form>
@@ -345,9 +346,13 @@
 <script src="js/script.js"></script>
 
 <script>
-	document.getElementById('contact-form').addEventListener('submit', handleSubmit);
-	function handleSubmit(event) {
+document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
   event.preventDefault(); // Prevent default form submission
+
+  // Show loading indicator
+  document.getElementById('loading-indicator').style.display = 'block';
 
   // Get form data (unchanged)
   const name = document.getElementById('name').value;
@@ -363,17 +368,14 @@
     message,
   };
 
-  // Show loading indicator
-  document.getElementById('loading-indicator').style.display = 'block';
-
   // Send data using Fetch API (unchanged)
   fetch('https://s2tfb84fdd.execute-api.us-east-1.amazonaws.com/default/contactFormHandler', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData),
   })
-    .then(response => response.json())
-    .then(data => {
+   .then(response => response.json())
+   .then(data => {
       console.log('Success:', data);
 
       // Hide loading indicator
@@ -385,7 +387,7 @@
       // Clear the form (optional)
       document.getElementById('contact-form').reset();
     })
-    .catch(error => {
+   .catch(error => {
       console.error('Error:', error);
 
       // Hide loading indicator
