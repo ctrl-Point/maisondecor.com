@@ -344,35 +344,35 @@
 	function handleSubmit(event) {
 		event.preventDefault(); // Prevent default form submission
 
-		// Get form data
-		const name = document.getElementById('name').value;
-		const email = document.getElementById('email').value;
-		const subject = document.getElementById('subject').value;
-		const message = document.getElementById('message').value;
+			// Get form data
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const subject = document.getElementById('subject').value;
+			const message = document.getElementById('message').value;
 
-		// Prepare data for sending
-		const event = {
-			name,
-			email,
-			subject,
-			message,
-		};
+			// Prepare data for sending
+			const formData = {
+				name,
+				email,
+				subject,
+				message,
+			};
 
-		// Send data using Fetch API
-		fetch('https://jt8ijzn1y9.execute-api.us-east-1.amazonaws.com/default/contactFormHandler', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(event),
-		})
-			.then(response => response.json())
-			.then(data => {
-			console.log('Success:', data);
-			// Handle successful submission (e.g., display success message)
+			// Send data using Fetch API
+			fetch('https://jt8ijzn1y9.execute-api.us-east-1.amazonaws.com/default/contactFormHandler', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData),
 			})
-			.catch(error => {
-			console.error('Error:', error);
-			// Handle submission error (e.g., display error message)
-			});
+				.then(response => response.json())
+				.then(data => {
+				console.log('Success:', data);
+				// Handle successful submission (e.g., display success message)
+				})
+				.catch(error => {
+				console.error('Error:', error);
+				// Handle submission error (e.g., display error message)
+				});
   }
 </script>
 <!--Google Map APi Key-->
