@@ -346,57 +346,63 @@
 <script src="js/script.js"></script>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+	document.getElementById('contact-form').addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
-  event.preventDefault(); // Prevent default form submission
+	function handleSubmit(event) {
+	event.preventDefault(); // Prevent default form submission
 
-  // Show loading indicator
-  document.getElementById('loading-indicator').style.display = 'block';
+	// Hide the form
+	document.getElementById('contact-form').style.display = 'none';
 
-  // Get form data (unchanged)
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
+	// Show loading indicator
+	document.getElementById('loading-indicator').style.display = 'block';
 
-  // Prepare data for sending (unchanged)
-  const formData = {
-    name,
-    email,
-    subject,
-    message,
-  };
+	// Get form data (unchanged)
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	const subject = document.getElementById('subject').value;
+	const message = document.getElementById('message').value;
 
-  // Send data using Fetch API (unchanged)
-  fetch('https://s2tfb84fdd.execute-api.us-east-1.amazonaws.com/default/contactFormHandler', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData),
-  })
-   .then(response => response.json())
-   .then(data => {
-      console.log('Success:', data);
+	// Prepare data for sending (unchanged)
+	const formData = {
+		name,
+		email,
+		subject,
+		message,
+	};
 
-      // Hide loading indicator
-      document.getElementById('loading-indicator').style.display = 'none';
+	// Send data using Fetch API (unchanged)
+	fetch('https://s2tfb84fdd.execute-api.us-east-1.amazonaws.com/default/contactFormHandler', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(formData),
+	})
+	.then(response => response.json())
+	.then(data => {
+		console.log('Success:', data);
 
-      // Show success message
-      document.getElementById('success-message').style.display = 'block';
+		// Hide loading indicator
+		document.getElementById('loading-indicator').style.display = 'none';
 
-      // Clear the form (optional)
-      document.getElementById('contact-form').reset();
-    })
-   .catch(error => {
-      console.error('Error:', error);
+		// Show success message
+		document.getElementById('success-message').style.display = 'block';
 
-      // Hide loading indicator
-      document.getElementById('loading-indicator').style.display = 'none';
+		// Show the form again
+		document.getElementById('contact-form').style.display = 'block';
 
-      // Display error message (optional)
-      // You can implement error handling logic here
-    });
-}
+		// Clear the form (optional)
+		document.getElementById('contact-form').reset();
+		})
+	.catch(error => {
+		console.error('Error:', error);
+
+		// Hide loading indicator
+		document.getElementById('loading-indicator').style.display = 'none';
+
+		// Display error message (optional)
+		// You can implement error handling logic here
+		});
+	}
 </script>
 <!--Google Map APi Key-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
