@@ -8548,4 +8548,8 @@ img{
 	z-index: 1000;
   }
 
-
+.dropdown-shop {
+	background-color: #e4b563;
+	margin-left: 5px;
+	margin-right: 5px;
+  }
