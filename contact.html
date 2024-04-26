@@ -160,7 +160,7 @@
 						<div class="contact-form">
 								
 							<!--Contact Form-->
-							<form id="contact-form">
+							<form method="post" action="https://s2tfb84fdd.execute-api.us-east-1.amazonaws.com/default/contactFormHandler" id="contact-form">
 								<div class="row clearfix">
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
 										<input type="text" name="name" id="name" placeholder="Your name" required>
@@ -374,6 +374,7 @@
 				// Handle submission error (e.g., display error message)
 				});
 
+				console.log(formData)
   }
 </script>
 <!--Google Map APi Key-->
