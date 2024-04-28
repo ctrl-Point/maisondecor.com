@@ -8518,6 +8518,9 @@ img{
 .dropdown-shop{
 	color: #e0b262;
 }
+.dropdown-shop:hover{
+	color: transparent;
+}
 
 .tiktok{
 	width: 13px;
